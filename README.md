@@ -28,7 +28,7 @@ Integration
 
 ```objective-c
 - (void)registerNewUser {
-    LessNeglectConnection *con = [LessNeglectConnection connectionWithCode:kAuthCode key:kAuthKey];
+    LessNeglectConnection *con = [LessNeglectConnection connectionWithCode:kProjectCode key:kAPISecret];
     
     //create a person object
     Person *person = [[Person alloc] init];
