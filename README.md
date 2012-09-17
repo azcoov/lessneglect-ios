@@ -32,7 +32,7 @@ Integration
     
     //create a person object
     Person *person = [[Person alloc] init];
-    person.email = @"test+6@tekfolio.me";
+    person.email = @"name@example.com";
     
     //create an event object
     Event *event = [[Event alloc] init];
@@ -41,6 +41,28 @@ Integration
     event.person = person;
     
     [con createActionEvent:event success:^(NSDictionary *response) {
+        //parse the json response and do something with it if you want
+    } error:^(NSError *error) {
+        //handle the error if you'd like
+    }];
+}
+```
+
+```objective-c
+- (void)sendUserMessage {
+    LessNeglectConnection *con = [LessNeglectConnection connectionWithCode:kProjectCode key:kAPISecret];
+    
+    //create a person object
+    Person *person = [[Person alloc] init];
+    person.email = @"name@example.com";
+    
+    //create an event object
+    Message *message = [[Message alloc] init];
+    message.subject = @"Hi there";
+    message.body = @"What do you think of the app so far?";
+    message.person = person;
+    
+    [con createMessage:message success:^(NSDictionary *response) {
         //parse the json response and do something with it if you want
     } error:^(NSError *error) {
         //handle the error if you'd like
