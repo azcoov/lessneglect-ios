@@ -1,4 +1,4 @@
-LessNeglect Objective-c Client
+[LessNeglect](www.lessneglect.com) Objective-c Client
 ===
 Send messages and events from your iOS app to LessNeglect!
 
@@ -12,7 +12,7 @@ Integration
     4.  Set Folders to "Create groups for any added folders"  
     5.  Select all targets that you want to add the SDK to  
 
-2.  Verify that libLessNeglect-ios.a has been added to the Link Binary With Libraries Build Phase for the targets you want to use the Library with.
+2.  Verify that libLessNeglect-ios.a has been added to the Link Binary With Libraries Build Phase for the targets you want to use the Library with.  
 
 3.  In your Application Delegate:  
     1. Import TestFlight: #import "lessneglect_ios.h"  
